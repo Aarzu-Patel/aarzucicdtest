@@ -8,7 +8,7 @@ app.use(express.json());
 // MongoDB Connection using async/await
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
+    await mongoose.connect(process.env.AZURE_COSMOS_CONNECTIONSTRING);
     console.log("✅ MongoDB Connected");
   } catch (err) {
     console.error("❌ MongoDB Connection Error:", err);
